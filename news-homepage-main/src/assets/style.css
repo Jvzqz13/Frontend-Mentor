@@ -105,6 +105,12 @@ li {
     font-weight: var(--fw-regualr);
 }
 
+/* Menu Hover */
+
+header li:hover {
+    color: var(--clr-primary-soft-orange)
+}
+
 /* Start Main Content */
 
 .wrapper {
@@ -114,6 +120,7 @@ li {
 .middle__wrapper {
     display: flex;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .left__content {
@@ -136,6 +143,7 @@ h1 {
 
 .left {
     text-align: left;
+    
 }
 
 .right{
@@ -165,6 +173,12 @@ button {
     border: 0;
 }
 
+button:hover {
+    background-color: var(--clr-ntrl-dark-blue);
+}
+
+/* Start Of SideBar */
+
 aside {
     flex: 1;
     background-color: var(--clr-ntrl-dark-blue);
@@ -181,15 +195,24 @@ aside h1 {
  margin: 1px;
 }
 
-h2 {
+aside h2, a {
     font-family: var(--ff-primary);
     font-weight: var(--fw-medium);
     font-size: 1rem;
+    text-decoration: none;
+    color: var(--clr-ntrl-off-white);
 }
+
+/* Side Bar link Hover */
+aside a:hover{
+    color: var(--clr-primary-soft-orange);
+}
+
+/* Bottom Content */
 
 .bottom__wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 1rem;
     padding: 1rem;
 }
@@ -210,3 +233,26 @@ h2 {
 .column img {
     width: 100px;
 }
+
+.column h2 a {
+    color: var(--clr-ntrl-dark-blue);
+}
+
+/* Hover Bottom Links */
+.column h2 a:hover {
+    color: var(--clr-primary-soft-red);
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width: 950px) {
+    .middle__wrapper {
+        flex-direction: column;
+    }
+
+    .bottom__wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+} 
